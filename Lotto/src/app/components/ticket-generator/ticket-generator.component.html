@@ -1,0 +1,8 @@
+<div style="border: 5px solid yellow;">
+    <input type="number" [(ngModel)]="boxesCount">
+    <button (click)="persistTicket()">Draw tickets</button>
+</div>
+<div class="centered-container">
+    <app-ticket [boxesCount]="boxesCount"></app-ticket>
+</div>
+

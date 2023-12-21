@@ -1,0 +1,9 @@
+<div class="grid-container">
+    <div class="row">
+        <ng-container *ngFor="let item of generatingItterationsCount; let i = index">
+            <div class="col-md-4">
+                <app-numbers-grid-box [ticketNumber]="i + 1"></app-numbers-grid-box>
+            </div>
+        </ng-container>
+    </div>
+</div>
