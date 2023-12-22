@@ -1,0 +1,18 @@
+<div class="table-responsive-md">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Ticket ID</th>
+          <th>Selected Numbers</th>
+          <th>Superzahl</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets$ | async">
+            <td>{{ticket.id}}</td>
+            <td><a [routerLink]="['/tickets', ticket.id]">View ticket</a></td>
+            <td>{{ticket.superzahl}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

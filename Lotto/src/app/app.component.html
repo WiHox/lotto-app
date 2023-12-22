@@ -1,3 +1,9 @@
+<div class="navbar">
+  <a class="navbar-logo" href="#">Razvan's Loto</a>
+  <a [routerLink]="['/home']">Home</a>
+  <a [routerLink]="['/tickets']">View Tickets</a>
+</div>
+
 <div class="centered-container">
-  <app-ticket-generator></app-ticket-generator>
+  <router-outlet></router-outlet>
 </div>

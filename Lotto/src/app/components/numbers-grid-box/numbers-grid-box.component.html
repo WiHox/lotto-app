@@ -8,9 +8,8 @@
             [id]="ticketNumber + 'checkbox' + number"
             class="form-check-input"
             type="checkbox"
-            (click)="inputChange()"
-            [(ngModel)]="selectedNumbers[number]"
-            [disabled]="countSelectedNumbers === 6 && !selectedNumbers[number]"
+            [checked]="selectedNumbers.includes(number)"
+            disabled="true"
           />
           <label class="form-check-label" style="margin: 1px">{{
             number

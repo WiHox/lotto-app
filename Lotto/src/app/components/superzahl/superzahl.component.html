@@ -1,1 +1,5 @@
-<p>superzahl works!</p>
+<div>
+    <label for="numberInput">Enter a number (1-9): </label>
+    <input type="number" id="numberInput" [(ngModel)]="enteredNumber" (input)="validateInput()" />
+    <div *ngIf="isInvalidNumber">Please enter a number between 1 and 9.</div>
+  </div>

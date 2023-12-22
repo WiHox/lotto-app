@@ -1,22 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { RandomNumberGeneratorService } from 'src/app/services/random-number-generator.service';
 
 @Component({
   selector: 'app-numbers-grid-box',
   templateUrl: './numbers-grid-box.component.html',
   styleUrls: ['./numbers-grid-box.component.less'],
 })
-export class NumbersGridBoxComponent {
-  @Input({required: true}) ticketNumber!: number;
-  selectedNumbers: boolean[] = [];
+export class NumbersGridBoxComponent implements OnInit {
+  @Input() ticketNumber!: number;
+  selectedNumbers: number[] = [];
   numbers = Array.from({ length: 49 }, (_, i) => i + 1);
-  countSelectedNumbers = 0;
 
-  inputChange() {
-    setTimeout(() => {
-      console.log(this.selectedNumbers);
-      this.countSelectedNumbers =
-        this.selectedNumbers.filter((value) => value === true).length;
-      console.log(this.countSelectedNumbers);
-    }, 50);
+  constructor(private lottoNumbersGenerator: RandomNumberGeneratorService) {}
+  
+  ngOnInit(): void {
+    this.selectedNumbers = this.lottoNumbersGenerator.generateSortedLottoNumbers();
+    console.log(this.selectedNumbers);
   }
 }
