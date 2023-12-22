@@ -1,0 +1,86 @@
+# Angular
+/node_modules
+/dist
+/e2e
+/*.log
+npm-debug.log
+
+# .NET
+/bin/
+/obj/
+/*.dll
+/*.exe
+/Publish/
+/logs/
+
+# Visual Studio Code
+.vscode/
+/.vscode/
+
+# Visual Studio
+*.suo
+*.user
+*.suo
+*.user
+*.sln.docstates
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Packages
+*.7z
+*.zip
+*.rar
+*.gz
+*.tar
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# API keys and secrets
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.local
+
+# Dependency directories
+/node_modules
+/jspm_packages
+
+# TypeScript
+*.tsbuildinfo
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# WebStorm
+.idea/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# JetBrains Rider
+.idea/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
